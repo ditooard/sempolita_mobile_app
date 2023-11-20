@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sempolita_mobile_app/shared/theme.dart';
 
 class SplashPage extends StatefulWidget {
   @override
@@ -9,32 +10,29 @@ class _SplashPageState extends State<SplashPage> {
   @override
   void initState() {
     super.initState();
+
+    // Use Future.delayed to wait for 3 seconds
+    Future.delayed(Duration(seconds: 3), () {
+      // Navigate to the '/started' route
+      Navigator.pushReplacementNamed(context, '/started');
+    });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: greenColor,
       body: SafeArea(
         child: Center(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center, // Mengatur konten di tengah layar
+            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisSize: MainAxisSize.min,
             children: [
               Image.asset(
                 'assets/images/logo.png',
-                width: 182,
-                height: 67.69,
-              ),
-              SizedBox(
-                height: 16, // Menambahkan jarak antara gambar dan teks
-              ),
-              Text(
-                'Check Sempolita',
-                style: TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w400,
-                  color: Color(0xffB3B3B3),
-                ),
-              ),
+                width: 172,
+                height: 168,
+              )
             ],
           ),
         ),

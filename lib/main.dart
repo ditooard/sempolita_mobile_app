@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'package:sempolita_mobile_app/shared/theme.dart';
+import 'package:sempolita_mobile_app/ui/pages/buat_akun_page.dart';
+import 'package:sempolita_mobile_app/ui/pages/get_started_page.dart';
 import 'package:sempolita_mobile_app/ui/pages/splashscreen_page.dart';
 
 class MyHttpOverrides extends HttpOverrides {
@@ -48,6 +50,8 @@ class MyApp extends StatelessWidget {
       initialRoute: '/splash',
       routes: {
         '/splash': (context) => SplashPage(),
+        '/started': (context) => GetStarted(),
+        '/buatAkun': (context) => BuatAkun(),
       },
     );
   }
