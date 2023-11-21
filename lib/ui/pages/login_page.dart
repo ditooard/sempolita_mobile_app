@@ -204,7 +204,7 @@ class _LoginPage extends State<LoginPage> {
                       top: 183,
                       child: GestureDetector(
                         onTap: () {
-                          Navigator.pushReplacementNamed(context, '/buatAkun');
+                          Navigator.pushReplacementNamed(context, '/lupaPassword');
                         },
                         child: SizedBox(
                           width: 117,

@@ -344,18 +344,18 @@ class _BuatAkun extends State<BuatAkun> {
                         ),
                       ),
                       Positioned(
-                        left: 53,
+                        left: 63,
                         top: 535,
                         child: GestureDetector(
                           onTap: () {
-                            Navigator.pushReplacementNamed(context, '/login');
+                            Navigator.pushReplacementNamed(context, '/termsConditions');
                           },
                           child: Text(
                             'Terms and Conditions',
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               color: Color(0xFF31C48D),
-                              fontSize: 16,
+                              fontSize: 14,
                               fontFamily: 'Poppins',
                               fontWeight: FontWeight.w300,
                               decoration: TextDecoration.underline,

@@ -6,7 +6,9 @@ import 'package:sempolita_mobile_app/shared/theme.dart';
 import 'package:sempolita_mobile_app/ui/pages/buat_akun_page.dart';
 import 'package:sempolita_mobile_app/ui/pages/get_started_page.dart';
 import 'package:sempolita_mobile_app/ui/pages/login_page.dart';
+import 'package:sempolita_mobile_app/ui/pages/lupa_password_page.dart';
 import 'package:sempolita_mobile_app/ui/pages/splashscreen_page.dart';
+import 'package:sempolita_mobile_app/ui/pages/term_conditions_page.dart';
 
 class MyHttpOverrides extends HttpOverrides {
   @override
@@ -54,6 +56,8 @@ class MyApp extends StatelessWidget {
         '/started': (context) => GetStarted(),
         '/buatAkun': (context) => BuatAkun(),
         '/login': (context) => LoginPage(),
+        '/termsConditions': (context) => TermsConditions(),
+        '/lupaPassword': (context) => LupaPassword(),
       },
     );
   }
