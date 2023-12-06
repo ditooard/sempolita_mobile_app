@@ -176,7 +176,7 @@ class _LoginPage extends State<LoginPage> {
                         child: ElevatedButton(
                           onPressed: () {
                             Navigator.pushReplacementNamed(
-                              context, '/dashboardAdmin');
+                              context, '/profile');
                           },
                           style: ElevatedButton.styleFrom(
                             primary: Color(0xFF31C48D), // Background color

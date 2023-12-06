@@ -11,6 +11,7 @@ import 'package:sempolita_mobile_app/ui/pages/get_started_page.dart';
 import 'package:sempolita_mobile_app/ui/pages/log_activity_%5Bage.dart';
 import 'package:sempolita_mobile_app/ui/pages/login_page.dart';
 import 'package:sempolita_mobile_app/ui/pages/lupa_password_page.dart';
+import 'package:sempolita_mobile_app/ui/pages/profile_page.dart';
 import 'package:sempolita_mobile_app/ui/pages/splashscreen_page.dart';
 import 'package:sempolita_mobile_app/ui/pages/term_conditions_page.dart';
 
@@ -66,6 +67,8 @@ class MyApp extends StatelessWidget {
         '/dashboardKader' : (context) => DashboardKader(),
         '/dashboardBidan' : (context) => DashboardBidan(),
         '/dashboardAdmin' : (context) => DashboardAdmin(),
+        '/profile' : (context) => ProfilePage(),
+        
 
       },
     );
