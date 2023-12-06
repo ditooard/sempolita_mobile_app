@@ -13,12 +13,14 @@ class _LupaPassword extends State<LupaPassword> {
 
   @override
   Widget build(BuildContext context) {
+    double lebarLayar = MediaQuery.of(context).size.width;
+    double tinggiLayar = MediaQuery.of(context).size.height;
     return Scaffold(
       body: SingleChildScrollView(
         child: SafeArea(
             child: Container(
-          width: 393,
-          height: 700,
+          width: lebarLayar,
+          height: tinggiLayar,
           padding: const EdgeInsets.only(
             top: 80,
             left: 41,

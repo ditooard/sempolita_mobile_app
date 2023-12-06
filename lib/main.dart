@@ -3,8 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'package:sempolita_mobile_app/shared/theme.dart';
-import 'package:sempolita_mobile_app/ui/pages/buat_akun_page.dart';
+import 'package:sempolita_mobile_app/ui/pages/db_admin_page.dart';
+import 'package:sempolita_mobile_app/ui/pages/db_bidan_page.dart';
+import 'package:sempolita_mobile_app/ui/pages/db_kader_page.dart';
+import 'package:sempolita_mobile_app/ui/pages/db_pasien_page.dart';
 import 'package:sempolita_mobile_app/ui/pages/get_started_page.dart';
+import 'package:sempolita_mobile_app/ui/pages/log_activity_%5Bage.dart';
 import 'package:sempolita_mobile_app/ui/pages/login_page.dart';
 import 'package:sempolita_mobile_app/ui/pages/lupa_password_page.dart';
 import 'package:sempolita_mobile_app/ui/pages/splashscreen_page.dart';
@@ -54,10 +58,15 @@ class MyApp extends StatelessWidget {
       routes: {
         '/splash': (context) => SplashPage(),
         '/started': (context) => GetStarted(),
-        '/buatAkun': (context) => BuatAkun(),
         '/login': (context) => LoginPage(),
         '/termsConditions': (context) => TermsConditions(),
         '/lupaPassword': (context) => LupaPassword(),
+        '/logActivity' :(context) => LogActivity(),
+        '/dashboardPasien' : (context) => DashboardPasien(),
+        '/dashboardKader' : (context) => DashboardKader(),
+        '/dashboardBidan' : (context) => DashboardBidan(),
+        '/dashboardAdmin' : (context) => DashboardAdmin(),
+
       },
     );
   }

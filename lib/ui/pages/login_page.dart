@@ -13,14 +13,16 @@ class _LoginPage extends State<LoginPage> {
 
   @override
   Widget build(BuildContext context) {
+    double lebarLayar = MediaQuery.of(context).size.width;
+    double tinggiLayar = MediaQuery.of(context).size.height;
     return Scaffold(
       body: SingleChildScrollView(
         child: SafeArea(
             child: Container(
-          width: 393,
-          height: 600,
+          width: lebarLayar,
+          height: tinggiLayar,
           padding: const EdgeInsets.only(
-            top: 185,
+            top: 150,
             left: 46,
             right: 40,
           ),
@@ -48,7 +50,7 @@ class _LoginPage extends State<LoginPage> {
               const SizedBox(height: 25),
               Container(
                 width: 292,
-                height: 300,
+                height: 400,
                 child: Stack(
                   children: [
                     Positioned(
@@ -173,7 +175,8 @@ class _LoginPage extends State<LoginPage> {
                         height: 50.57,
                         child: ElevatedButton(
                           onPressed: () {
-                            // Handle button press
+                            Navigator.pushReplacementNamed(
+                              context, '/dashboardAdmin');
                           },
                           style: ElevatedButton.styleFrom(
                             primary: Color(0xFF31C48D), // Background color
@@ -204,7 +207,8 @@ class _LoginPage extends State<LoginPage> {
                       top: 183,
                       child: GestureDetector(
                         onTap: () {
-                          Navigator.pushReplacementNamed(context, '/lupaPassword');
+                          Navigator.pushReplacementNamed(
+                              context, '/lupaPassword');
                         },
                         child: SizedBox(
                           width: 117,
@@ -218,6 +222,28 @@ class _LoginPage extends State<LoginPage> {
                               fontWeight: FontWeight.w500,
                               height: 0,
                             ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    Positioned(
+                      left: 63,
+                      top: 310,
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.pushReplacementNamed(
+                              context, '/termsConditions');
+                        },
+                        child: Text(
+                          'Terms and Conditions',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            color: Color(0xFF31C48D),
+                            fontSize: 14,
+                            fontFamily: 'Poppins',
+                            fontWeight: FontWeight.w300,
+                            decoration: TextDecoration.underline,
+                            height: 0,
                           ),
                         ),
                       ),

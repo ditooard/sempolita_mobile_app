@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 class TermsConditions extends StatefulWidget {
   @override
   State<TermsConditions> createState() => _TermsConditions();
+  
 }
 
 class _TermsConditions extends State<TermsConditions> {
@@ -11,14 +12,18 @@ class _TermsConditions extends State<TermsConditions> {
     super.initState();
   }
 
+  
+
   @override
   Widget build(BuildContext context) {
+    double lebarLayar = MediaQuery.of(context).size.width;
+    double tinggiLayar = MediaQuery.of(context).size.height;
     return Scaffold(
       body: SingleChildScrollView(
         child: SafeArea(
             child: Container(
-          width: 393,
-          height: 730,
+          width: lebarLayar,
+          height: tinggiLayar,
           clipBehavior: Clip.antiAlias,
           decoration: BoxDecoration(color: Colors.white),
           child: Stack(
@@ -127,7 +132,7 @@ class _TermsConditions extends State<TermsConditions> {
                                         GestureDetector(
                                           onTap: () {
                                             Navigator.pushReplacementNamed(
-                                                context, '/buatAkun');
+                                                context, '/login');
                                           },
                                           child: Container(
                                             width: 24,

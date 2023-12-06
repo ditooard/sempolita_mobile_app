@@ -74,7 +74,7 @@ class _GetStarted extends State<GetStarted> {
                           height: 55,
                           child: ElevatedButton(
                             onPressed: () {
-                              Navigator.pushReplacementNamed(context, '/buatAkun');
+                              Navigator.pushReplacementNamed(context, '/login');
                             },
                             style: ElevatedButton.styleFrom(
                               shape: RoundedRectangleBorder(
