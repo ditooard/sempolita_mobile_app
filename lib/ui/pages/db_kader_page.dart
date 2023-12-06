@@ -192,8 +192,8 @@ class _DashboardKader extends State<DashboardKader> {
                           height: 61,
                           decoration: ShapeDecoration(
                             image: DecorationImage(
-                              image: NetworkImage(
-                                  "https://via.placeholder.com/63x61"),
+                              image: AssetImage(
+                                  "assets/images/logo2.png"),
                               fit: BoxFit.fill,
                             ),
                             shape: RoundedRectangleBorder(
@@ -258,8 +258,8 @@ class _DashboardKader extends State<DashboardKader> {
                                       height: 70,
                                       decoration: BoxDecoration(
                                         image: DecorationImage(
-                                          image: NetworkImage(
-                                              "https://via.placeholder.com/70x70"),
+                                          image: AssetImage(
+                                              "assets/images/jadwal.png"),
                                           fit: BoxFit.fill,
                                         ),
                                       ),
@@ -365,8 +365,8 @@ class _DashboardKader extends State<DashboardKader> {
                                       height: 70,
                                       decoration: BoxDecoration(
                                         image: DecorationImage(
-                                          image: NetworkImage(
-                                              "https://via.placeholder.com/70x70"),
+                                          image: AssetImage(
+                                              "assets/images/ambil.png"),
                                           fit: BoxFit.fill,
                                         ),
                                       ),
@@ -472,8 +472,8 @@ class _DashboardKader extends State<DashboardKader> {
                                       height: 70,
                                       decoration: BoxDecoration(
                                         image: DecorationImage(
-                                          image: NetworkImage(
-                                              "https://via.placeholder.com/70x70"),
+                                          image: AssetImage(
+                                              "assets/images/daftar.png"),
                                           fit: BoxFit.fill,
                                         ),
                                       ),

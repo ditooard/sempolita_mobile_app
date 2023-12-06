@@ -156,10 +156,8 @@ class _ProfilPage extends State<ProfilePage> {
                             width: 16,
                             height: 16,
                             child: Stack(children: [
-                              Icon(
-                                Icons.arrow_forward_ios,
-                                color: Color.fromARGB(255, 245, 75, 32),
-                              ),
+                              Icon(Icons.arrow_forward_ios,
+                                  color: Color(0xff31C48D)),
                             ]),
                           ),
                         ],
@@ -212,9 +210,9 @@ class _ProfilPage extends State<ProfilePage> {
                                 width: 24 * fem,
                                 height: 24 * fem,
                                 child: Image.asset(
-                                  'assets/images/security-safe.png',
+                                  'assets/images/profile-circle.png',
                                   color: Color(
-                                      0xfff95031), // Gantilah dengan warna yang sesuai
+                                      0xff31C48D), // Gantilah dengan warna yang sesuai
                                 ),
                               ),
                               Container(
@@ -246,7 +244,7 @@ class _ProfilPage extends State<ProfilePage> {
                                       height: 16 * fem,
                                       child: Icon(
                                         Icons.arrow_forward_ios,
-                                        color: Color.fromARGB(255, 245, 75, 32),
+                                        color: Color(0xff31C48D),
                                       ),
                                     ),
                                   ],
@@ -266,7 +264,7 @@ class _ProfilPage extends State<ProfilePage> {
                 },
                 child: Container(
                   padding: EdgeInsets.fromLTRB(
-                      24 * fem, 16 * fem, 24 * fem, 150 * fem),
+                      24 * fem, 16 * fem, 24 * fem, 230 * fem),
                   width: double.infinity,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
@@ -303,7 +301,7 @@ class _ProfilPage extends State<ProfilePage> {
                                 child: Image.asset(
                                   'assets/images/security-safe.png',
                                   color: Color(
-                                      0xfff95031), // Gantilah dengan warna yang sesuai
+                                      0xff31C48D), // Gantilah dengan warna yang sesuai
                                 ),
                               ),
                               Container(
@@ -335,7 +333,7 @@ class _ProfilPage extends State<ProfilePage> {
                                       height: 16 * fem,
                                       child: Icon(
                                         Icons.arrow_forward_ios,
-                                        color: Color.fromARGB(255, 245, 75, 32),
+                                        color: Color(0xff31C48D),
                                       ),
                                     ),
                                   ],
@@ -349,81 +347,199 @@ class _ProfilPage extends State<ProfilePage> {
                   ),
                 ),
               ),
-              GestureDetector(
-                onTap: () {
-                  Navigator.pushNamed(context, '/ubahpassword');
-                },
-                child: Container(
-                  padding: EdgeInsets.fromLTRB(
-                      24 * fem, 16 * fem, 24 * fem, 47 * fem),
-                  width: double.infinity,
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Container(
-                        margin: EdgeInsets.fromLTRB(
-                            0 * fem, 0 * fem, 0 * fem, 0 * fem),
-                        padding: EdgeInsets.fromLTRB(
-                            12 * fem, 12 * fem, 12 * fem, 12 * fem),
-                        width: double.infinity,
-                        height: 48 * fem,
-                        decoration: BoxDecoration(
-                          color: Color(0xffffffff),
-                          borderRadius: BorderRadius.circular(8 * fem),
-                          boxShadow: [
-                            BoxShadow(
-                              color: Color(0x19000000),
-                              offset: Offset(0 * fem, 0 * fem),
-                              blurRadius: 10.5 * fem,
+              Container(
+                padding:
+                    EdgeInsets.fromLTRB(24 * fem, 0 * fem, 24 * fem, 52 * fem),
+                width: double.infinity,
+                height: 110 * fem,
+                decoration: BoxDecoration(
+                  color: Color.fromARGB(255, 141, 74, 74).withOpacity(0),
+                ),
+                child: ElevatedButton(
+                  onPressed: () {
+                    showDialog(
+                      context: context,
+                      builder: (BuildContext context) {
+                        return AlertDialog(
+                          content: Container(
+                            padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
+                            width: 247 * fem,
+                            height: 155 *
+                                fem, // Menambahkan tinggi agar dialog lebih proporsional
+                            decoration: BoxDecoration(
+                              color: Color(0xffffffff),
+                              borderRadius: BorderRadius.circular(8 * fem),
                             ),
-                          ],
-                        ),
-                        child: Container(
-                          width: double.infinity,
-                          height: double.infinity,
-                          child: Row(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Container(
-                                margin: EdgeInsets.fromLTRB(
-                                    0 * fem, 4 * fem, 0 * fem, 3.5 * fem),
-                                height: double.infinity,
-                                child: Row(
-                                  crossAxisAlignment: CrossAxisAlignment.center,
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Container(
+                                  margin: EdgeInsets.fromLTRB(
+                                      0 * fem, 0 * fem, 0 * fem, 14.4 * fem),
+                                  width: 58.8 * fem,
+                                  height: 55.2 * fem,
+                                  child: Image.asset(
+                                    'assets/images/alert.png',
+                                    width: 58.8 * fem,
+                                    height: 55.2 * fem,
+                                  ),
+                                ),
+                                Container(
+                                  margin: EdgeInsets.fromLTRB(
+                                      0 * fem,
+                                      0 * fem,
+                                      0 * fem,
+                                      10 * fem), // Memberi margin ke teks
+                                  constraints: BoxConstraints(
+                                    maxWidth: 197 * fem,
+                                  ),
+                                  child: Text(
+                                    'Anda yakin ingin keluar dari akun anda ?',
+                                    textAlign: TextAlign.center,
+                                    style: SafeGoogleFont(
+                                      'Plus Jakarta Sans',
+                                      fontSize: 12 * ffem,
+                                      fontWeight: FontWeight.w500,
+                                      height: 1 * ffem / fem,
+                                      color: Color(0xff333333),
+                                    ),
+                                  ),
+                                ),
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
-                                    Container(
-                                      margin: EdgeInsets.fromLTRB(0 * fem,
-                                          0.5 * fem, 200 * fem, 0 * fem),
-                                      child: Text(
-                                        'Keluar Akun',
-                                        style: SafeGoogleFont(
-                                          'Plus Jakarta Sans',
-                                          fontSize: 16 * ffem,
-                                          fontWeight: FontWeight.w500,
-                                          height: 1.26 * ffem / fem,
-                                          letterSpacing: -0.25 * fem,
-                                          color: Color(0xff818181),
+                                    TextButton(
+                                      onPressed: () {
+                                        Navigator.of(context).pop();
+                                      },
+                                      child: Container(
+                                        width: 97.50,
+                                        height: 25,
+                                        padding: const EdgeInsets.symmetric(
+                                          horizontal: 12,
+                                          vertical: 4,
+                                        ),
+                                        decoration: ShapeDecoration(
+                                          shape: RoundedRectangleBorder(
+                                            side: BorderSide(
+                                              width: 1,
+                                              color: Color(0xFF999999),
+                                            ),
+                                            borderRadius:
+                                                BorderRadius.circular(8),
+                                          ),
+                                        ),
+                                        child: Row(
+                                          mainAxisSize: MainAxisSize.min,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.center,
+                                          children: [
+                                            Text(
+                                              'Tidak',
+                                              style: TextStyle(
+                                                color: Color(0xFF999999),
+                                                fontSize: 12,
+                                                fontFamily: 'Plus Jakarta Sans',
+                                                fontWeight: FontWeight.w400,
+                                                height: 0,
+                                              ),
+                                            ),
+                                          ],
                                         ),
                                       ),
                                     ),
-                                    Container(
-                                      margin: EdgeInsets.fromLTRB(
-                                          0 * fem, 0 * fem, 0 * fem, 0.5 * fem),
-                                      width: 16 * fem,
-                                      height: 16 * fem,
-                                      child: Icon(
-                                        Icons.arrow_forward_ios,
-                                        color: Color.fromARGB(255, 245, 75, 32),
+                                    SizedBox(
+                                      width:
+                                          4, // Jarak antara tombol "Tidak" dan "Iya"
+                                    ),
+                                    TextButton(
+                                      onPressed: () {},
+                                      child: Container(
+                                        width: 97.50,
+                                        height: 25,
+                                        padding: const EdgeInsets.symmetric(
+                                          horizontal: 12,
+                                          vertical: 4,
+                                        ),
+                                        decoration: ShapeDecoration(
+                                          color: Color(0xffFF9C20),
+                                          shape: RoundedRectangleBorder(
+                                            borderRadius:
+                                                BorderRadius.circular(8),
+                                          ),
+                                        ),
+                                        child: Row(
+                                          mainAxisSize: MainAxisSize.min,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.center,
+                                          children: [
+                                            Text(
+                                              'Iya',
+                                              style: TextStyle(
+                                                color: Colors.white,
+                                                fontSize: 12,
+                                                fontFamily: 'Plus Jakarta Sans',
+                                                fontWeight: FontWeight.w400,
+                                                height: 0,
+                                              ),
+                                            ),
+                                          ],
+                                        ),
                                       ),
                                     ),
                                   ],
                                 ),
-                              ),
-                            ],
+                              ],
+                            ),
+                          ),
+                        );
+                      },
+                    );
+                  },
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Color.fromARGB(255, 255, 255, 255),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8 * fem),
+                    ),
+                    padding: EdgeInsets.symmetric(vertical: 0 * fem),
+                    shadowColor: Colors.black,
+                    elevation: 1,
+                  ),
+                  child: Container(
+                    width: double.infinity,
+                    height: double.infinity,
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Container(
+                          margin: EdgeInsets.fromLTRB(
+                              20 * fem, 1 * fem, 167 * fem, 0 * fem),
+                          child: Text(
+                            'Keluar Akun',
+                            style: SafeGoogleFont(
+                              'Plus Jakarta Sans',
+                              fontSize: 16 * ffem,
+                              fontWeight: FontWeight.w600,
+                              height: 1.26 * ffem / fem,
+                              color: Color(0xff31C48D),
+                            ),
                           ),
                         ),
-                      ),
-                    ],
+                        Container(
+                          width: 24 * fem,
+                          height: 24 * fem,
+                          child: Image.asset(
+                            'assets/images/logout.png',
+                            color: Color(
+                                0xff31C48D), // Gantilah dengan warna yang sesuai
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ),

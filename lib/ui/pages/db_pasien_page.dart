@@ -208,8 +208,9 @@ class _DashboardPasien extends State<DashboardPasien> {
                           height: 61,
                           decoration: ShapeDecoration(
                             image: DecorationImage(
-                              image: NetworkImage(
-                                  "https://via.placeholder.com/63x61"),
+                              image: AssetImage(
+                                'assets/images/logo2.png'
+                              ),
                               fit: BoxFit.fill,
                             ),
                             shape: RoundedRectangleBorder(
@@ -274,8 +275,8 @@ class _DashboardPasien extends State<DashboardPasien> {
                                       height: 70,
                                       decoration: BoxDecoration(
                                         image: DecorationImage(
-                                          image: NetworkImage(
-                                              "https://via.placeholder.com/70x70"),
+                                          image: AssetImage(
+                                              'assets/images/jadwal.png'),
                                           fit: BoxFit.fill,
                                         ),
                                       ),
@@ -381,8 +382,8 @@ class _DashboardPasien extends State<DashboardPasien> {
                                       height: 70,
                                       decoration: BoxDecoration(
                                         image: DecorationImage(
-                                          image: NetworkImage(
-                                              "https://via.placeholder.com/70x70"),
+                                          image: AssetImage(
+                                              'assets/images/status.png'),
                                           fit: BoxFit.fill,
                                         ),
                                       ),

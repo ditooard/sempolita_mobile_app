@@ -190,8 +190,7 @@ class _DashboardAdmin extends State<DashboardAdmin> {
                           height: 61,
                           decoration: ShapeDecoration(
                             image: DecorationImage(
-                              image: NetworkImage(
-                                  "https://via.placeholder.com/63x61"),
+                              image: AssetImage("assets/images/logo2.png"),
                               fit: BoxFit.fill,
                             ),
                             shape: RoundedRectangleBorder(
@@ -256,8 +255,8 @@ class _DashboardAdmin extends State<DashboardAdmin> {
                                       height: 70,
                                       decoration: BoxDecoration(
                                         image: DecorationImage(
-                                          image: NetworkImage(
-                                              "https://via.placeholder.com/70x70"),
+                                          image: AssetImage(
+                                              "assets/images/jadwal.png"),
                                           fit: BoxFit.fill,
                                         ),
                                       ),
@@ -363,8 +362,8 @@ class _DashboardAdmin extends State<DashboardAdmin> {
                                       height: 70,
                                       decoration: BoxDecoration(
                                         image: DecorationImage(
-                                          image: NetworkImage(
-                                              "https://via.placeholder.com/70x70"),
+                                          image: AssetImage(
+                                              "assets/images/daftar.png"),
                                           fit: BoxFit.fill,
                                         ),
                                       ),
@@ -470,8 +469,8 @@ class _DashboardAdmin extends State<DashboardAdmin> {
                                       height: 70,
                                       decoration: BoxDecoration(
                                         image: DecorationImage(
-                                          image: NetworkImage(
-                                              "https://via.placeholder.com/70x70"),
+                                          image: AssetImage(
+                                              "assets/images/cetak.png"),
                                           fit: BoxFit.fill,
                                         ),
                                       ),
@@ -577,8 +576,8 @@ class _DashboardAdmin extends State<DashboardAdmin> {
                                       height: 70,
                                       decoration: BoxDecoration(
                                         image: DecorationImage(
-                                          image: NetworkImage(
-                                              "https://via.placeholder.com/70x70"),
+                                          image: AssetImage(
+                                              "assets/images/user.png"),
                                           fit: BoxFit.fill,
                                         ),
                                       ),
