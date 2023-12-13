@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:sempolita_mobile_app/models/font.dart';
 
 class DashboardKader extends StatefulWidget {
   @override
@@ -16,7 +15,6 @@ class _DashboardKader extends State<DashboardKader> {
   Widget build(BuildContext context) {
     double baseWidth = 370;
     double fem = MediaQuery.of(context).size.width / baseWidth;
-    double ffem = fem * 0.97;
     double lebarLayar = MediaQuery.of(context).size.width;
     double tinggiLayar = MediaQuery.of(context).size.height;
     return Scaffold(
@@ -76,7 +74,7 @@ class _DashboardKader extends State<DashboardKader> {
                           ),
                           Container(
                             margin: EdgeInsets.fromLTRB(
-                              0 * fem, 0 * fem, 0 * fem, 1 * fem),
+                                0 * fem, 0 * fem, 0 * fem, 1 * fem),
                             padding: const EdgeInsets.all(10),
                             decoration: ShapeDecoration(
                               color: Color(0xFFFAFAFA),
@@ -192,8 +190,7 @@ class _DashboardKader extends State<DashboardKader> {
                           height: 61,
                           decoration: ShapeDecoration(
                             image: DecorationImage(
-                              image: AssetImage(
-                                  "assets/images/logo2.png"),
+                              image: AssetImage("assets/images/logo2.png"),
                               fit: BoxFit.fill,
                             ),
                             shape: RoundedRectangleBorder(

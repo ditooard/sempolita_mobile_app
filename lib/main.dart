@@ -3,10 +3,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'package:sempolita_mobile_app/shared/theme.dart';
+import 'package:sempolita_mobile_app/ui/pages/data_pribadi_page.dart';
 import 'package:sempolita_mobile_app/ui/pages/db_admin_page.dart';
 import 'package:sempolita_mobile_app/ui/pages/db_bidan_page.dart';
 import 'package:sempolita_mobile_app/ui/pages/db_kader_page.dart';
 import 'package:sempolita_mobile_app/ui/pages/db_pasien_page.dart';
+import 'package:sempolita_mobile_app/ui/pages/detail_profile_page.dart';
+import 'package:sempolita_mobile_app/ui/pages/detail_profile_pasien_page.dart';
 import 'package:sempolita_mobile_app/ui/pages/get_started_page.dart';
 import 'package:sempolita_mobile_app/ui/pages/log_activity_%5Bage.dart';
 import 'package:sempolita_mobile_app/ui/pages/login_page.dart';
@@ -14,6 +17,7 @@ import 'package:sempolita_mobile_app/ui/pages/lupa_password_page.dart';
 import 'package:sempolita_mobile_app/ui/pages/profile_page.dart';
 import 'package:sempolita_mobile_app/ui/pages/splashscreen_page.dart';
 import 'package:sempolita_mobile_app/ui/pages/term_conditions_page.dart';
+import 'package:sempolita_mobile_app/ui/pages/ubah_password_page.dart';
 
 class MyHttpOverrides extends HttpOverrides {
   @override
@@ -54,8 +58,8 @@ class MyApp extends StatelessWidget {
             800: Color(0xff31C48D),
             900: Color(0xff31C48D),
           })),
-      home: SplashPage(),
-      initialRoute: '/splash',
+      home: DataPribadi(),
+      initialRoute: '/dataPribadi',
       routes: {
         '/splash': (context) => SplashPage(),
         '/started': (context) => GetStarted(),
@@ -68,8 +72,10 @@ class MyApp extends StatelessWidget {
         '/dashboardBidan' : (context) => DashboardBidan(),
         '/dashboardAdmin' : (context) => DashboardAdmin(),
         '/profile' : (context) => ProfilePage(),
-        
-
+        '/ubahPassword' : (context) => UbahPassword(),
+        '/dataPribadi' : (context) => DataPribadi(),
+        '/detailProfile' : (context) => DetailProfile(),
+        '/detailProfilePasien' : (context) => DetailProfilePasien(),
       },
     );
   }
