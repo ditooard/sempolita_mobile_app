@@ -3,13 +3,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'package:sempolita_mobile_app/shared/theme.dart';
-import 'package:sempolita_mobile_app/ui/pages/data_pribadi_page.dart';
-import 'package:sempolita_mobile_app/ui/pages/db_admin_page.dart';
-import 'package:sempolita_mobile_app/ui/pages/db_bidan_page.dart';
-import 'package:sempolita_mobile_app/ui/pages/db_kader_page.dart';
-import 'package:sempolita_mobile_app/ui/pages/db_pasien_page.dart';
+import 'package:sempolita_mobile_app/ui/pages/pasien/data_pribadi_page.dart';
+import 'package:sempolita_mobile_app/ui/pages/admin/db_admin_page.dart';
+import 'package:sempolita_mobile_app/ui/pages/bidan/db_bidan_page.dart';
+import 'package:sempolita_mobile_app/ui/pages/kader/db_kader_page.dart';
+import 'package:sempolita_mobile_app/ui/pages/pasien/db_pasien_page.dart';
 import 'package:sempolita_mobile_app/ui/pages/detail_profile_page.dart';
-import 'package:sempolita_mobile_app/ui/pages/detail_profile_pasien_page.dart';
+import 'package:sempolita_mobile_app/ui/pages/pasien/detail_profile_pasien_page.dart';
 import 'package:sempolita_mobile_app/ui/pages/get_started_page.dart';
 import 'package:sempolita_mobile_app/ui/pages/log_activity_%5Bage.dart';
 import 'package:sempolita_mobile_app/ui/pages/login_page.dart';
@@ -32,7 +32,6 @@ void main() {
   HttpOverrides.global = MyHttpOverrides();
   debugPaintSizeEnabled = false;
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-    systemNavigationBarColor: greenColor, // Warna navigation bar
     statusBarColor: greenColor, // Warna status bar
   ));
   runApp(MyApp());
@@ -46,7 +45,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
           fontFamily: 'Poppins',
-          primarySwatch: MaterialColor(0xff31C48D, {
+          primaryColor: MaterialColor(0xff31C48D, {
             50: Color(0xff31C48D),
             100: Color(0xff31C48D),
             200: Color(0xff31C48D),
@@ -57,6 +56,7 @@ class MyApp extends StatelessWidget {
             700: Color(0xff31C48D),
             800: Color(0xff31C48D),
             900: Color(0xff31C48D),
+            1000: Color(0xff31C48D),
           })),
       home: DataPribadi(),
       initialRoute: '/dataPribadi',
@@ -66,16 +66,16 @@ class MyApp extends StatelessWidget {
         '/login': (context) => LoginPage(),
         '/termsConditions': (context) => TermsConditions(),
         '/lupaPassword': (context) => LupaPassword(),
-        '/logActivity' :(context) => LogActivity(),
-        '/dashboardPasien' : (context) => DashboardPasien(),
-        '/dashboardKader' : (context) => DashboardKader(),
-        '/dashboardBidan' : (context) => DashboardBidan(),
-        '/dashboardAdmin' : (context) => DashboardAdmin(),
-        '/profile' : (context) => ProfilePage(),
-        '/ubahPassword' : (context) => UbahPassword(),
-        '/dataPribadi' : (context) => DataPribadi(),
-        '/detailProfile' : (context) => DetailProfile(),
-        '/detailProfilePasien' : (context) => DetailProfilePasien(),
+        '/logActivity': (context) => LogActivity(),
+        '/dashboardPasien': (context) => DashboardPasien(),
+        '/dashboardKader': (context) => DashboardKader(),
+        '/dashboardBidan': (context) => DashboardBidan(),
+        '/dashboardAdmin': (context) => DashboardAdmin(),
+        '/profile': (context) => ProfilePage(),
+        '/ubahPassword': (context) => UbahPassword(),
+        '/dataPribadi': (context) => DataPribadi(),
+        '/detailProfile': (context) => DetailProfile(),
+        '/detailProfilePasien': (context) => DetailProfilePasien(),
       },
     );
   }
