@@ -4,6 +4,7 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'package:sempolita_mobile_app/shared/theme.dart';
 import 'package:sempolita_mobile_app/ui/pages/admin/log_activity_admin_page.dart';
+import 'package:sempolita_mobile_app/ui/pages/jadwal_posyandu_page.dart';
 import 'package:sempolita_mobile_app/ui/pages/pasien/data_pribadi_page.dart';
 import 'package:sempolita_mobile_app/ui/pages/admin/db_admin_page.dart';
 import 'package:sempolita_mobile_app/ui/pages/bidan/db_bidan_page.dart';
@@ -60,8 +61,8 @@ class MyApp extends StatelessWidget {
             900: Color(0xff31C48D),
             1000: Color(0xff31C48D),
           })),
-      home: ProfilePage(),
-      initialRoute: '/profile',
+      home: JadwalPosyandu(),
+      initialRoute: '/jadwalPosyandu',
       routes: {
         '/splash': (context) => SplashPage(),
         '/started': (context) => GetStarted(),
@@ -80,6 +81,7 @@ class MyApp extends StatelessWidget {
         '/dataPribadi': (context) => DataPribadi(),
         '/detailProfile': (context) => DetailProfile(),
         '/detailProfilePasien': (context) => DetailProfilePasien(),
+        '/jadwalPosyandu': (context) => JadwalPosyandu(),
       },
     );
   }
