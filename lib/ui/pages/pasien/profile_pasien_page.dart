@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:sempolita_mobile_app/models/font.dart';
 
-class ProfilePage extends StatefulWidget {
+class ProfilePagePasien extends StatefulWidget {
   @override
-  State<ProfilePage> createState() => _ProfilPage();
+  State<ProfilePagePasien> createState() => _ProfilPagePasien();
 }
 
-class _ProfilPage extends State<ProfilePage> {
+class _ProfilPagePasien extends State<ProfilePagePasien> {
   @override
   void initState() {
     super.initState();
@@ -112,7 +112,7 @@ class _ProfilPage extends State<ProfilePage> {
                                     SizedBox(
                                       width: double.infinity,
                                       child: Text(
-                                        'Mikasa Putri Jalasveva',
+                                        'Dhimas Afri Setiawan',
                                         style: TextStyle(
                                           color: Color(0xFF333333),
                                           fontSize: 16,
@@ -126,7 +126,7 @@ class _ProfilPage extends State<ProfilePage> {
                                     SizedBox(
                                       width: double.infinity,
                                       child: Text(
-                                        'Kader Posyandu',
+                                        'Orang tua dari Anabella Putri ',
                                         style: TextStyle(
                                           color: Color(0xFF333333),
                                           fontSize: 12,
@@ -175,7 +175,96 @@ class _ProfilPage extends State<ProfilePage> {
                 },
                 child: Container(
                   padding: EdgeInsets.fromLTRB(
-                      24 * fem, 16 * fem, 24 * fem, 280 * fem),
+                      24 * fem, 16 * fem, 24 * fem, 0 * fem),
+                  width: double.infinity,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Container(
+                        margin: EdgeInsets.fromLTRB(
+                            0 * fem, 0 * fem, 0 * fem, 0 * fem),
+                        padding: EdgeInsets.fromLTRB(
+                            12 * fem, 12 * fem, 12 * fem, 12 * fem),
+                        width: double.infinity,
+                        height: 48 * fem,
+                        decoration: BoxDecoration(
+                          color: Color(0xffffffff),
+                          borderRadius: BorderRadius.circular(8 * fem),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Color(0x19000000),
+                              offset: Offset(0 * fem, 0 * fem),
+                              blurRadius: 10.5 * fem,
+                            ),
+                          ],
+                        ),
+                        child: Container(
+                          width: double.infinity,
+                          height: double.infinity,
+                          child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Container(
+                                margin: EdgeInsets.fromLTRB(
+                                    0 * fem, 0 * fem, 8 * fem, 0 * fem),
+                                width: 24 * fem,
+                                height: 24 * fem,
+                                child: Image.asset(
+                                  'assets/images/profile-circle.png',
+                                  color: Color(
+                                      0xff31C48D), // Gantilah dengan warna yang sesuai
+                                ),
+                              ),
+                              Container(
+                                margin: EdgeInsets.fromLTRB(
+                                    0 * fem, 4 * fem, 0 * fem, 3.5 * fem),
+                                height: double.infinity,
+                                child: Row(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: [
+                                    Container(
+                                      margin: EdgeInsets.fromLTRB(0 * fem,
+                                          0.5 * fem, 190 * fem, 0 * fem),
+                                      child: Text(
+                                        'Data Pribadi',
+                                        style: SafeGoogleFont(
+                                          'Plus Jakarta Sans',
+                                          fontSize: 12 * ffem,
+                                          fontWeight: FontWeight.w500,
+                                          height: 1.26 * ffem / fem,
+                                          letterSpacing: -0.25 * fem,
+                                          color: Color(0xff818181),
+                                        ),
+                                      ),
+                                    ),
+                                    Container(
+                                      margin: EdgeInsets.fromLTRB(
+                                          0 * fem, 0 * fem, 0 * fem, 0.5 * fem),
+                                      width: 16 * fem,
+                                      height: 16 * fem,
+                                      child: Icon(
+                                        Icons.arrow_forward_ios,
+                                        color: Color(0xff31C48D),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, '/ubahpassword');
+                },
+                child: Container(
+                  padding: EdgeInsets.fromLTRB(
+                      24 * fem, 16 * fem, 24 * fem, 230 * fem),
                   width: double.infinity,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,

@@ -20,7 +20,7 @@ class _DetailProfilePasien extends State<DetailProfilePasien> {
         child: Container(
           width: lebarLayar,
           height: tinggiLayar,
-          padding: const EdgeInsets.only(top: 42),
+          padding: const EdgeInsets.only(top: 20),
           clipBehavior: Clip.antiAlias,
           decoration: BoxDecoration(color: Colors.white),
           child: Column(

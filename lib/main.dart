@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'package:sempolita_mobile_app/shared/theme.dart';
+import 'package:sempolita_mobile_app/ui/pages/admin/log_activity_admin_page.dart';
 import 'package:sempolita_mobile_app/ui/pages/pasien/data_pribadi_page.dart';
 import 'package:sempolita_mobile_app/ui/pages/admin/db_admin_page.dart';
 import 'package:sempolita_mobile_app/ui/pages/bidan/db_bidan_page.dart';
@@ -11,9 +12,10 @@ import 'package:sempolita_mobile_app/ui/pages/pasien/db_pasien_page.dart';
 import 'package:sempolita_mobile_app/ui/pages/detail_profile_page.dart';
 import 'package:sempolita_mobile_app/ui/pages/pasien/detail_profile_pasien_page.dart';
 import 'package:sempolita_mobile_app/ui/pages/get_started_page.dart';
-import 'package:sempolita_mobile_app/ui/pages/log_activity_%5Bage.dart';
+import 'package:sempolita_mobile_app/ui/pages/log_activity_page.dart';
 import 'package:sempolita_mobile_app/ui/pages/login_page.dart';
 import 'package:sempolita_mobile_app/ui/pages/lupa_password_page.dart';
+import 'package:sempolita_mobile_app/ui/pages/pasien/profile_pasien_page.dart';
 import 'package:sempolita_mobile_app/ui/pages/profile_page.dart';
 import 'package:sempolita_mobile_app/ui/pages/splashscreen_page.dart';
 import 'package:sempolita_mobile_app/ui/pages/term_conditions_page.dart';
@@ -58,8 +60,8 @@ class MyApp extends StatelessWidget {
             900: Color(0xff31C48D),
             1000: Color(0xff31C48D),
           })),
-      home: DataPribadi(),
-      initialRoute: '/dataPribadi',
+      home: ProfilePage(),
+      initialRoute: '/profile',
       routes: {
         '/splash': (context) => SplashPage(),
         '/started': (context) => GetStarted(),
@@ -67,11 +69,13 @@ class MyApp extends StatelessWidget {
         '/termsConditions': (context) => TermsConditions(),
         '/lupaPassword': (context) => LupaPassword(),
         '/logActivity': (context) => LogActivity(),
+        '/logActivityAdmin': (context) => LogActivityAdmin(),
         '/dashboardPasien': (context) => DashboardPasien(),
         '/dashboardKader': (context) => DashboardKader(),
         '/dashboardBidan': (context) => DashboardBidan(),
         '/dashboardAdmin': (context) => DashboardAdmin(),
         '/profile': (context) => ProfilePage(),
+        '/profilePasien': (context) => ProfilePagePasien(),
         '/ubahPassword': (context) => UbahPassword(),
         '/dataPribadi': (context) => DataPribadi(),
         '/detailProfile': (context) => DetailProfile(),

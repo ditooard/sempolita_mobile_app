@@ -20,7 +20,7 @@ class _DetailProfile extends State<DetailProfile> {
         child: Container(
           width: lebarLayar,
           height: tinggiLayar,
-          padding: const EdgeInsets.only(top: 42),
+          padding: const EdgeInsets.only(top: 20),
           clipBehavior: Clip.antiAlias,
           decoration: BoxDecoration(color: Colors.white),
           child: Column(
@@ -30,8 +30,7 @@ class _DetailProfile extends State<DetailProfile> {
             children: [
               Container(
                 width: 393,
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 24),
+                padding: const EdgeInsets.symmetric(horizontal: 24),
                 decoration: BoxDecoration(color: Colors.white),
                 child: Row(
                   mainAxisSize: MainAxisSize.min,
@@ -361,8 +360,7 @@ class _DetailProfile extends State<DetailProfile> {
                     Container(
                       width: 500,
                       height: 50.57,
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 24),
+                      padding: const EdgeInsets.symmetric(horizontal: 24),
                       child: ElevatedButton(
                         onPressed: () {
                           Navigator.pushReplacementNamed(context, '');
