@@ -13,6 +13,18 @@ class _JadwalPosyandu extends State<JadwalPosyandu> {
     KalenderPosyandu("RW 04", "Minggu", "18 Januari 2023"),
     KalenderPosyandu("RW 05", "Selasa", "20 Januari 2023"),
     KalenderPosyandu("RW 06", "Kamis", "22 Januari 2023"),
+    KalenderPosyandu("RW 06", "Kamis", "22 Januari 2023"),
+    KalenderPosyandu("RW 06", "Kamis", "22 Januari 2023"),
+    KalenderPosyandu("RW 06", "Kamis", "22 Januari 2023"),
+    KalenderPosyandu("RW 06", "Kamis", "22 Januari 2023"),
+    KalenderPosyandu("RW 06", "Kamis", "22 Januari 2023"),
+    KalenderPosyandu("RW 06", "Kamis", "22 Januari 2023"),
+    KalenderPosyandu("RW 06", "Kamis", "22 Januari 2023"),
+    KalenderPosyandu("RW 06", "Kamis", "22 Januari 2023"),
+    KalenderPosyandu("RW 06", "Kamis", "22 Januari 2023"),
+    KalenderPosyandu("RW 06", "Kamis", "22 Januari 2023"),
+    KalenderPosyandu("RW 06", "Kamis", "22 Januari 2023"),
+    KalenderPosyandu("RW 06", "Kamis", "22 Januari 2023"),
     // Tambahkan jadwal lainnya sesuai kebutuhan
   ];
 
@@ -106,12 +118,11 @@ class _JadwalPosyandu extends State<JadwalPosyandu> {
   @override
   Widget build(BuildContext context) {
     double lebarLayar = MediaQuery.of(context).size.width;
-    double tinggiLayar = MediaQuery.of(context).size.height;
     return Scaffold(
       body: SafeArea(
         child: Container(
           width: lebarLayar,
-          height: tinggiLayar,
+          height: 700,
           padding: const EdgeInsets.only(top: 20),
           clipBehavior: Clip.antiAlias,
           decoration: BoxDecoration(color: Colors.white),
@@ -198,12 +209,31 @@ class _JadwalPosyandu extends State<JadwalPosyandu> {
                   ],
                 ),
               ),
-              const SizedBox(height: 5),
+              const SizedBox(height: 15),
+              Container(
+                color: Color(0xff31C48D),
+                padding:
+                    EdgeInsets.only(left: 0, top: 20, right: 0, bottom: 10),
+                width: 353, // Menetapkan lebar kontainer ke lebar maksimal
+                child: Text(
+                  'Bulan Januari Tahun 2023',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 18.36,
+                    fontFamily: 'Poppins',
+                    fontWeight: FontWeight.w700,
+                    height: 0.07,
+                  ),
+                ),
+              ),
               Expanded(
                 child: Container(
-                  padding: EdgeInsets.only(left: 20, top: 8, right: 20, bottom: 50),
+                  padding:
+                      EdgeInsets.only(left: 20, top: 0, right: 20, bottom: 0),
                   child: Container(
-                    padding: EdgeInsets.only(left: 10, top: 50, right: 10, bottom: 0),
+                    padding: EdgeInsets.only(
+                        left: 10, top: 10, right: 10, bottom: 10),
                     color: Color(0xff31C48D),
                     child: GridView.builder(
                       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
@@ -219,6 +249,23 @@ class _JadwalPosyandu extends State<JadwalPosyandu> {
                   ),
                 ),
               ),
+              Container(
+                color: Color(0xff31C48D),
+                padding: EdgeInsets.only(
+                    left: 70, top: 10, right: 72, bottom: 15),
+                child: Text(
+                  textAlign: TextAlign.center,
+                  '#SEHATDENGANPOSYANDU',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 15,
+                    fontStyle: FontStyle.italic,
+                    fontFamily: 'Poppins',
+                    fontWeight: FontWeight.w800,
+                    height: 0.12,
+                  ),
+                ),
+              )
             ],
           ),
         ),

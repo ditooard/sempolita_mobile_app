@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'package:sempolita_mobile_app/shared/theme.dart';
+import 'package:sempolita_mobile_app/ui/pages/admin/daftar_user_page.dart';
 import 'package:sempolita_mobile_app/ui/pages/admin/log_activity_admin_page.dart';
+import 'package:sempolita_mobile_app/ui/pages/daftar_pasien_page.dart';
 import 'package:sempolita_mobile_app/ui/pages/jadwal_posyandu_page.dart';
 import 'package:sempolita_mobile_app/ui/pages/pasien/data_pribadi_page.dart';
 import 'package:sempolita_mobile_app/ui/pages/admin/db_admin_page.dart';
@@ -17,6 +19,7 @@ import 'package:sempolita_mobile_app/ui/pages/log_activity_page.dart';
 import 'package:sempolita_mobile_app/ui/pages/login_page.dart';
 import 'package:sempolita_mobile_app/ui/pages/lupa_password_page.dart';
 import 'package:sempolita_mobile_app/ui/pages/pasien/profile_pasien_page.dart';
+import 'package:sempolita_mobile_app/ui/pages/pasien/status_kesehatan_balita.dart';
 import 'package:sempolita_mobile_app/ui/pages/profile_page.dart';
 import 'package:sempolita_mobile_app/ui/pages/splashscreen_page.dart';
 import 'package:sempolita_mobile_app/ui/pages/term_conditions_page.dart';
@@ -61,8 +64,8 @@ class MyApp extends StatelessWidget {
             900: Color(0xff31C48D),
             1000: Color(0xff31C48D),
           })),
-      home: JadwalPosyandu(),
-      initialRoute: '/jadwalPosyandu',
+      home: DaftarUser(),
+      initialRoute: '/daftarUser',
       routes: {
         '/splash': (context) => SplashPage(),
         '/started': (context) => GetStarted(),
@@ -82,6 +85,9 @@ class MyApp extends StatelessWidget {
         '/detailProfile': (context) => DetailProfile(),
         '/detailProfilePasien': (context) => DetailProfilePasien(),
         '/jadwalPosyandu': (context) => JadwalPosyandu(),
+        '/statusKesehatanBalita': (context) => StatusKesahatanBalita(),
+        '/daftarPasien': (context) => DaftarPasien(),
+        '/daftarUser': (context) => DaftarUser(),
       },
     );
   }
