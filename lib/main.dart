@@ -5,8 +5,10 @@ import 'package:flutter/services.dart';
 import 'package:sempolita_mobile_app/shared/theme.dart';
 import 'package:sempolita_mobile_app/ui/pages/admin/daftar_user_page.dart';
 import 'package:sempolita_mobile_app/ui/pages/admin/log_activity_admin_page.dart';
+import 'package:sempolita_mobile_app/ui/pages/bidan/status_kesehatan_bidan.dart';
 import 'package:sempolita_mobile_app/ui/pages/daftar_pasien_page.dart';
 import 'package:sempolita_mobile_app/ui/pages/jadwal_posyandu_page.dart';
+import 'package:sempolita_mobile_app/ui/pages/kader/ambil_data_posyandu_page.dart';
 import 'package:sempolita_mobile_app/ui/pages/kader/status_kesehatan_kader.dart';
 import 'package:sempolita_mobile_app/ui/pages/pasien/data_pribadi_page.dart';
 import 'package:sempolita_mobile_app/ui/pages/admin/db_admin_page.dart';
@@ -65,8 +67,8 @@ class MyApp extends StatelessWidget {
             900: Color(0xff31C48D),
             1000: Color(0xff31C48D),
           })),
-      home: StatusKesahatanByKader(),
-      initialRoute: '/statusKesehatanByKader',
+      home: StatusKesahatanByBidan(),
+      initialRoute: '/statusKesehatanByBidan',
       routes: {
         '/splash': (context) => SplashPage(),
         '/started': (context) => GetStarted(),
@@ -88,8 +90,10 @@ class MyApp extends StatelessWidget {
         '/jadwalPosyandu': (context) => JadwalPosyandu(),
         '/statusKesehatanBalita': (context) => StatusKesahatanBalita(),
         '/statusKesehatanByKader': (context) => StatusKesahatanByKader(),
+        '/statusKesehatanByBidan': (context) => StatusKesahatanByBidan(),
         '/daftarPasien': (context) => DaftarPasien(),
         '/daftarUser': (context) => DaftarUser(),
+        '/ambilDataPosyandu': (context) => AmbilDataPosyandu(),
       },
     );
   }

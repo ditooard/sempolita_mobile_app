@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:sempolita_mobile_app/shared/theme.dart';
 
-class StatusKesahatanBalita extends StatefulWidget {
+class StatusKesahatanByBidan extends StatefulWidget {
   @override
-  State<StatusKesahatanBalita> createState() => _StatusKesahatanBalita();
+  State<StatusKesahatanByBidan> createState() => _StatusKesahatanByBidan();
 }
 
-class _StatusKesahatanBalita extends State<StatusKesahatanBalita> {
+class _StatusKesahatanByBidan extends State<StatusKesahatanByBidan> {
   @override
   void initState() {
     super.initState();
@@ -16,6 +17,37 @@ class _StatusKesahatanBalita extends State<StatusKesahatanBalita> {
     double lebarLayar = MediaQuery.of(context).size.width;
     double tinggiLayar = 800;
     return Scaffold(
+      bottomNavigationBar: BottomAppBar(
+        elevation: 100,
+        color: Color(0xFFFFFFFF), // Change background color
+        child: Container(
+          padding: EdgeInsets.fromLTRB(0, 5, 0, 5),
+          child: ElevatedButton(
+            onPressed: () {
+              // Add your onPressed logic here
+            },
+            style: ElevatedButton.styleFrom(
+              minimumSize: Size(200, 50), // Adjust size as needed
+              padding: EdgeInsets.all(0), // No padding
+              primary: Color(0xFF31C48D),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(8),
+              ),
+              elevation: 4,
+            ),
+            child: Text(
+              'Simpan',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 18,
+                fontFamily: 'Plus Jakarta Sans',
+                fontWeight: FontWeight.w400,
+                height: 0,
+              ),
+            ),
+          ),
+        ),
+      ),
       body: SingleChildScrollView(
         child: SafeArea(
           child: Container(
@@ -96,7 +128,7 @@ class _StatusKesahatanBalita extends State<StatusKesahatanBalita> {
                         ),
                         const SizedBox(width: 12),
                         Text(
-                          'Data Pribadi Anda',
+                          'Status Kesehatan Balita',
                           style: TextStyle(
                             color: Colors.black,
                             fontSize: 18,
@@ -111,7 +143,7 @@ class _StatusKesahatanBalita extends State<StatusKesahatanBalita> {
                   const SizedBox(height: 20),
                   Container(
                     width: 375,
-                    height: 673,
+                    height: 700,
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       mainAxisAlignment: MainAxisAlignment.start,
@@ -196,7 +228,7 @@ class _StatusKesahatanBalita extends State<StatusKesahatanBalita> {
                             ],
                           ),
                         ),
-                        const SizedBox(height: 15),
+                        const SizedBox(height: 5),
                         Container(
                           child: Column(
                             mainAxisSize: MainAxisSize.min,
@@ -276,7 +308,7 @@ class _StatusKesahatanBalita extends State<StatusKesahatanBalita> {
                             ],
                           ),
                         ),
-                        const SizedBox(height: 15),
+                        const SizedBox(height: 10),
                         Container(
                           width: 375,
                           height: 28,
@@ -303,7 +335,7 @@ class _StatusKesahatanBalita extends State<StatusKesahatanBalita> {
                               SizedBox(
                                 width: 171,
                                 child: Text(
-                                  '18',
+                                  '12',
                                   textAlign: TextAlign.right,
                                   style: TextStyle(
                                     color: Color(0xFF333333),
@@ -332,7 +364,7 @@ class _StatusKesahatanBalita extends State<StatusKesahatanBalita> {
                             ],
                           ),
                         ),
-                        const SizedBox(height: 15),
+                        const SizedBox(height: 5),
                         Container(
                           width: 375,
                           height: 28,
@@ -345,7 +377,7 @@ class _StatusKesahatanBalita extends State<StatusKesahatanBalita> {
                               SizedBox(
                                 width: 100,
                                 child: Text(
-                                  'BB ',
+                                  'BB Terakhir',
                                   style: TextStyle(
                                     color: Color(0xFF333333),
                                     fontSize: 14,
@@ -388,7 +420,7 @@ class _StatusKesahatanBalita extends State<StatusKesahatanBalita> {
                             ],
                           ),
                         ),
-                        const SizedBox(height: 15),
+                        const SizedBox(height: 5),
                         Container(
                           width: 375,
                           height: 28,
@@ -401,7 +433,7 @@ class _StatusKesahatanBalita extends State<StatusKesahatanBalita> {
                               SizedBox(
                                 width: 100,
                                 child: Text(
-                                  'TB ',
+                                  'BB Terakhir',
                                   style: TextStyle(
                                     color: Color(0xFF333333),
                                     fontSize: 14,
@@ -444,7 +476,7 @@ class _StatusKesahatanBalita extends State<StatusKesahatanBalita> {
                             ],
                           ),
                         ),
-                        const SizedBox(height: 15),
+                        const SizedBox(height: 5),
                         Container(
                           width: 375,
                           height: 28,
@@ -500,7 +532,7 @@ class _StatusKesahatanBalita extends State<StatusKesahatanBalita> {
                             ],
                           ),
                         ),
-                        const SizedBox(height: 15),
+                        const SizedBox(height: 5),
                         Container(
                           width: 375,
                           height: 28,
@@ -556,7 +588,7 @@ class _StatusKesahatanBalita extends State<StatusKesahatanBalita> {
                             ],
                           ),
                         ),
-                        const SizedBox(height: 15),
+                        const SizedBox(height: 5),
                         Container(
                           width: 375,
                           height: 28,
@@ -567,9 +599,9 @@ class _StatusKesahatanBalita extends State<StatusKesahatanBalita> {
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               SizedBox(
-                                width: 124,
+                                width: 100,
                                 child: Text(
-                                  'Status Kesehatan',
+                                  'TB / U',
                                   style: TextStyle(
                                     color: Color(0xFF333333),
                                     fontSize: 14,
@@ -580,21 +612,39 @@ class _StatusKesahatanBalita extends State<StatusKesahatanBalita> {
                                 ),
                               ),
                               const SizedBox(width: 10),
-                              Container(
-                                width: 25,
-                                height: 25,
-                                decoration: BoxDecoration(
-                                  image: DecorationImage(
-                                    image: AssetImage(
-                                        "assets/images/question.png"),
-                                    fit: BoxFit.fill,
+                              SizedBox(
+                                width: 171,
+                                child: Text(
+                                  '-',
+                                  textAlign: TextAlign.right,
+                                  style: TextStyle(
+                                    color: Color(0xFF333333),
+                                    fontSize: 12,
+                                    fontFamily: 'Plus Jakarta Sans',
+                                    fontWeight: FontWeight.w400,
+                                    height: 0,
+                                  ),
+                                ),
+                              ),
+                              const SizedBox(width: 10),
+                              SizedBox(
+                                width: 35,
+                                child: Text(
+                                  'cm',
+                                  textAlign: TextAlign.right,
+                                  style: TextStyle(
+                                    color: Color(0xFF333333),
+                                    fontSize: 12,
+                                    fontFamily: 'Plus Jakarta Sans',
+                                    fontWeight: FontWeight.w400,
+                                    height: 0,
                                   ),
                                 ),
                               ),
                             ],
                           ),
                         ),
-                        const SizedBox(height: 15),
+                        const SizedBox(height: 10),
                         Container(
                           child: Column(
                             mainAxisSize: MainAxisSize.min,
@@ -658,7 +708,7 @@ class _StatusKesahatanBalita extends State<StatusKesahatanBalita> {
                                           Expanded(
                                             child: SizedBox(
                                               child: Text(
-                                                'Berat badan dan tinggi badan sesuai dengan usia nya',
+                                                'Berat badan dan tinggi badan sesuai dengan usianya',
                                                 style: TextStyle(
                                                   color: Color(0xFF333333),
                                                   fontSize: 12,
@@ -679,7 +729,7 @@ class _StatusKesahatanBalita extends State<StatusKesahatanBalita> {
                             ],
                           ),
                         ),
-                        const SizedBox(height: 15),
+                        const SizedBox(height: 5),
                         Container(
                           child: Column(
                             mainAxisSize: MainAxisSize.min,
@@ -699,7 +749,7 @@ class _StatusKesahatanBalita extends State<StatusKesahatanBalita> {
                                     Expanded(
                                       child: SizedBox(
                                         child: Text(
-                                          'Catatan Bidan ',
+                                          'Kondisi Kesehatan Balita',
                                           style: TextStyle(
                                             color: Color(0xFF333333),
                                             fontSize: 14,
@@ -714,7 +764,7 @@ class _StatusKesahatanBalita extends State<StatusKesahatanBalita> {
                                 ),
                               ),
                               Container(
-                                height: 81,
+                                height: 48,
                                 padding:
                                     const EdgeInsets.symmetric(horizontal: 24),
                                 child: Column(
@@ -722,43 +772,119 @@ class _StatusKesahatanBalita extends State<StatusKesahatanBalita> {
                                   mainAxisAlignment: MainAxisAlignment.start,
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    Container(
-                                      width: double.infinity,
-                                      height: 81,
-                                      padding: const EdgeInsets.symmetric(
-                                          horizontal: 10, vertical: 8),
-                                      decoration: ShapeDecoration(
-                                        color: Color(0xFFF4F4F4),
-                                        shape: RoundedRectangleBorder(
-                                            borderRadius:
-                                                BorderRadius.circular(8)),
-                                      ),
-                                      child: Row(
-                                        mainAxisSize: MainAxisSize.min,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.start,
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: [
-                                          Expanded(
-                                            child: SizedBox(
-                                              child: Text(
-                                                'Bayi sehat, bugar, dan aktif. teruskan pemberian gizi seimbang.',
-                                                style: TextStyle(
-                                                  color: Color(0xFF333333),
-                                                  fontSize: 12,
-                                                  fontFamily:
-                                                      'Plus Jakarta Sans',
-                                                  fontWeight: FontWeight.w400,
-                                                  height: 0,
-                                                ),
-                                              ),
-                                            ),
+                                    DropdownButtonFormField<String>(
+                                      decoration: InputDecoration(
+                                        contentPadding:
+                                            const EdgeInsets.symmetric(
+                                                horizontal: 10, vertical: 8),
+                                        filled: true,
+                                        hintText:
+                                            "Piih status kesehatan balita",
+                                        hintStyle: TextStyle(
+                                            fontSize: 12,
+                                            color: Color(0xffB3B3B3)),
+                                        fillColor: Colors.white,
+                                        border: OutlineInputBorder(
+                                          borderRadius:
+                                              BorderRadius.circular(8),
+                                          borderSide: BorderSide(
+                                            color: Color(0xffB3B3B3),
+                                            width: 2,
                                           ),
-                                        ],
+                                          
+                                        ),
+                                      ),
+                                      items:
+                                          ['Baik', 'Buruk'].map((String value) {
+                                        return DropdownMenuItem<String>(
+                                          value: value,
+                                          child: Text(
+                                            value,
+                                            style: TextStyle(fontSize: 12),
+                                          ),
+                                        );
+                                      }).toList(),
+                                      onChanged: (String? newValue) {
+                                        // Handle dropdown value change
+                                      },
+                                      value:
+                                          null, // Set the default or current value here
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        const SizedBox(height: 5),
+                        Container(
+                          child: Column(
+                            mainAxisSize: MainAxisSize.min,
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Container(
+                                width: 375,
+                                height: 28,
+                                padding:
+                                    const EdgeInsets.symmetric(horizontal: 24),
+                                child: Row(
+                                  mainAxisSize: MainAxisSize.min,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: [
+                                    Expanded(
+                                      child: SizedBox(
+                                        child: Text(
+                                          'Catatan Bidan Desa',
+                                          style: TextStyle(
+                                            color: Color(0xFF333333),
+                                            fontSize: 14,
+                                            fontFamily: 'Plus Jakarta Sans',
+                                            fontWeight: FontWeight.w600,
+                                            height: 0,
+                                          ),
+                                        ),
                                       ),
                                     ),
                                   ],
+                                ),
+                              ),
+                              Container(
+                                padding:
+                                    const EdgeInsets.symmetric(horizontal: 24),
+                                child: Container(
+                                  height: 81,
+                                  decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.circular(12),
+                                    border: Border.all(
+                                      color: Color(0xffB3B3B3),
+                                      width: 2,
+                                    ),
+                                  ),
+                                  child: Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                      horizontal: 12,
+                                    ),
+                                    child: TextFormField(
+                                        decoration: InputDecoration(
+                                          hintText:
+                                              'Silahkan menuliskan catatan untuk balita',
+                                          hintStyle: TextStyle(
+                                            fontSize: 12,
+                                            color: Color(0xffB3B3B3),
+                                          ),
+                                          border: InputBorder.none,
+                                        ),
+                                        maxLines:
+                                            null, // Boleh diisi lebih dari satu baris
+                                        style: TextStyle(
+                                            fontSize: 12,
+                                            color: blackColor,
+                                            fontFamily: 'Plus Jakarta Sans',
+                                            fontWeight: FontWeight.normal)),
+                                  ),
                                 ),
                               ),
                             ],
