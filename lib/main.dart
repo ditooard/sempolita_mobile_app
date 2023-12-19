@@ -7,6 +7,7 @@ import 'package:sempolita_mobile_app/ui/pages/admin/daftar_user_page.dart';
 import 'package:sempolita_mobile_app/ui/pages/admin/log_activity_admin_page.dart';
 import 'package:sempolita_mobile_app/ui/pages/daftar_pasien_page.dart';
 import 'package:sempolita_mobile_app/ui/pages/jadwal_posyandu_page.dart';
+import 'package:sempolita_mobile_app/ui/pages/kader/status_kesehatan_kader.dart';
 import 'package:sempolita_mobile_app/ui/pages/pasien/data_pribadi_page.dart';
 import 'package:sempolita_mobile_app/ui/pages/admin/db_admin_page.dart';
 import 'package:sempolita_mobile_app/ui/pages/bidan/db_bidan_page.dart';
@@ -64,8 +65,8 @@ class MyApp extends StatelessWidget {
             900: Color(0xff31C48D),
             1000: Color(0xff31C48D),
           })),
-      home: DaftarUser(),
-      initialRoute: '/daftarUser',
+      home: StatusKesahatanByKader(),
+      initialRoute: '/statusKesehatanByKader',
       routes: {
         '/splash': (context) => SplashPage(),
         '/started': (context) => GetStarted(),
@@ -86,6 +87,7 @@ class MyApp extends StatelessWidget {
         '/detailProfilePasien': (context) => DetailProfilePasien(),
         '/jadwalPosyandu': (context) => JadwalPosyandu(),
         '/statusKesehatanBalita': (context) => StatusKesahatanBalita(),
+        '/statusKesehatanByKader': (context) => StatusKesahatanByKader(),
         '/daftarPasien': (context) => DaftarPasien(),
         '/daftarUser': (context) => DaftarUser(),
       },
