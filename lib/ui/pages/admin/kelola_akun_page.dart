@@ -1,11 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:sempolita_mobile_app/shared/theme.dart';
 
 class KelolaAkun extends StatefulWidget {
   @override
   State<KelolaAkun> createState() => _KelolaAkun();
 }
 
+class Hp {
+  final String hp;
+
+  Hp({required this.hp});
+}
+
 class _KelolaAkun extends State<KelolaAkun> {
+  final List<Hp> daftarNoHp = [
+    Hp(hp: '081226446610'),
+    Hp(hp: '081357426470'),
+    Hp(hp: '08161606063'),
+  ];
+
   @override
   void initState() {
     super.initState();
@@ -145,51 +158,17 @@ class _KelolaAkun extends State<KelolaAkun> {
                                       child: Container(
                                         width: 285,
                                         height: 44.08,
-                                        decoration: ShapeDecoration(
-                                          shape: RoundedRectangleBorder(
-                                            side: BorderSide(
+                                        child: TextField(
+                                          decoration: InputDecoration(
+                                            contentPadding:
+                                                EdgeInsets.symmetric(
+                                                    horizontal: 16),
+                                            border: OutlineInputBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(17),
+                                              borderSide: BorderSide(
                                                 width: 1,
-                                                color: Color(0xFF31C48D)),
-                                            borderRadius:
-                                                BorderRadius.circular(17),
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                    Positioned(
-                                      left: 19.37,
-                                      top: 36,
-                                      child: SizedBox(
-                                        width: 240.39,
-                                        height: 15,
-                                        child: Text(
-                                          'Kenzie Ha',
-                                          style: TextStyle(
-                                            color: Color(0xFF1E1349),
-                                            fontSize: 12,
-                                            fontFamily: 'Poppins',
-                                            fontWeight: FontWeight.w400,
-                                            height: 0,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                    Positioned(
-                                      left: 86.59,
-                                      top: 33,
-                                      child: Transform(
-                                        transform: Matrix4.identity()
-                                          ..translate(0.0, 0.0)
-                                          ..rotateZ(1.57),
-                                        child: Container(
-                                          width: 21,
-                                          decoration: ShapeDecoration(
-                                            shape: RoundedRectangleBorder(
-                                              side: BorderSide(
-                                                width: 1,
-                                                strokeAlign: BorderSide
-                                                    .strokeAlignCenter,
-                                                color: Color(0xFF1E1349),
+                                                color: Color(0xFFDBD7EB),
                                               ),
                                             ),
                                           ),
@@ -232,31 +211,19 @@ class _KelolaAkun extends State<KelolaAkun> {
                                       child: Container(
                                         width: 285,
                                         height: 44.08,
-                                        decoration: ShapeDecoration(
-                                          shape: RoundedRectangleBorder(
-                                            side: BorderSide(
+                                        child: TextField(
+                                          decoration: InputDecoration(
+                                            contentPadding:
+                                                EdgeInsets.symmetric(
+                                                    horizontal: 16),
+                                            border: OutlineInputBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(17),
+                                              borderSide: BorderSide(
                                                 width: 1,
-                                                color: Color(0xFFDBD7EB)),
-                                            borderRadius:
-                                                BorderRadius.circular(17),
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                    Positioned(
-                                      left: 19.37,
-                                      top: 36.26,
-                                      child: SizedBox(
-                                        width: 240.39,
-                                        height: 14,
-                                        child: Text(
-                                          'Abdul Rahman',
-                                          style: TextStyle(
-                                            color: Color(0xFF1E1349),
-                                            fontSize: 12,
-                                            fontFamily: 'Poppins',
-                                            fontWeight: FontWeight.w400,
-                                            height: 0,
+                                                color: Color(0xFFDBD7EB),
+                                              ),
+                                            ),
                                           ),
                                         ),
                                       ),
@@ -297,13 +264,19 @@ class _KelolaAkun extends State<KelolaAkun> {
                                       child: Container(
                                         width: 285,
                                         height: 44.08,
-                                        decoration: ShapeDecoration(
-                                          shape: RoundedRectangleBorder(
-                                            side: BorderSide(
+                                        child: TextField(
+                                          decoration: InputDecoration(
+                                            contentPadding:
+                                                EdgeInsets.symmetric(
+                                                    horizontal: 16),
+                                            border: OutlineInputBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(17),
+                                              borderSide: BorderSide(
                                                 width: 1,
-                                                color: Color(0xFFDBD7EB)),
-                                            borderRadius:
-                                                BorderRadius.circular(17),
+                                                color: Color(0xFFDBD7EB),
+                                              ),
+                                            ),
                                           ),
                                         ),
                                       ),
@@ -335,57 +308,62 @@ class _KelolaAkun extends State<KelolaAkun> {
                               top: 246,
                               child: Container(
                                 width: 285,
-                                height: 95,
-                                child: Column(
-                                  mainAxisSize: MainAxisSize.min,
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                height: 65.71,
+                                child: Stack(
                                   children: [
-                                    SizedBox(
-                                      width: 266.13,
-                                      height: 16.83,
-                                      child: Text(
-                                        'Role Pengguna',
-                                        style: TextStyle(
-                                          color: Color(0xFF1E1349),
-                                          fontSize: 12,
-                                          fontFamily: 'Poppins',
-                                          fontWeight: FontWeight.w400,
-                                          height: 0,
-                                        ),
-                                      ),
-                                    ),
-                                    const SizedBox(height: 5),
-                                    Container(
-                                      width: 285,
-                                      height: 44.08,
-                                      decoration: ShapeDecoration(
-                                        shape: RoundedRectangleBorder(
-                                          side: BorderSide(
-                                              width: 1,
-                                              color: Color(0xFFDBD7EB)),
-                                          borderRadius:
-                                              BorderRadius.circular(17),
-                                        ),
-                                      ),
-                                    ),
-                                    const SizedBox(height: 5),
-                                    Container(
-                                      width: 21,
-                                      height: 24,
-                                      child: Column(
-                                        mainAxisSize: MainAxisSize.min,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.center,
-                                        children: [
-                                          Container(
-                                            width: 21,
-                                            height: 24,
-                                            child: Stack(children: []),
+                                    Positioned(
+                                      left: 0,
+                                      top: 21.64,
+                                      child: Container(
+                                        width: 285,
+                                        height: 44.08,
+                                        child: DropdownButtonFormField(
+                                          decoration: InputDecoration(
+                                            contentPadding:
+                                                EdgeInsets.symmetric(
+                                                    horizontal: 16),
+                                            border: OutlineInputBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(17),
+                                              borderSide: BorderSide(
+                                                width: 1,
+                                                color: Color(0xFFDBD7EB),
+                                              ),
+                                            ),
                                           ),
-                                        ],
+                                          items: [
+                                            DropdownMenuItem(
+                                              value: 'option1',
+                                              child: Text('Option 1'),
+                                            ),
+                                            DropdownMenuItem(
+                                              value: 'option2',
+                                              child: Text('Option 2'),
+                                            ),
+                                            // Add more DropdownMenuItem as needed
+                                          ],
+                                          onChanged: (value) {
+                                            // Handle the dropdown value change
+                                          },
+                                        ),
+                                      ),
+                                    ),
+                                    Positioned(
+                                      left: 0,
+                                      top: 0,
+                                      child: SizedBox(
+                                        width: 266.13,
+                                        height: 16.83,
+                                        child: Text(
+                                          'Role Pengguna',
+                                          style: TextStyle(
+                                            color: Color(0xFF1E1349),
+                                            fontSize: 12,
+                                            fontFamily: 'Poppins',
+                                            fontWeight: FontWeight.w400,
+                                            height: 0,
+                                          ),
+                                        ),
                                       ),
                                     ),
                                   ],
@@ -393,48 +371,34 @@ class _KelolaAkun extends State<KelolaAkun> {
                               ),
                             ),
                             Positioned(
-                              left: 16,
-                              top: 327,
-                              child: Container(
-                                width: 250.15,
-                                height: 44.08,
-                                child: Stack(
-                                  children: [
-                                    Positioned(
-                                      left: 0,
-                                      top: 0,
-                                      child: Container(
-                                        width: 250.15,
-                                        height: 44.08,
-                                        decoration: ShapeDecoration(
-                                          color: Color(0xFF31C48D),
-                                          shape: RoundedRectangleBorder(
-                                            borderRadius:
-                                                BorderRadius.circular(17),
-                                          ),
-                                        ),
+                              top: 330,
+                              child: ElevatedButton(
+                                onPressed: () {
+                                  // Add your onPressed logic here
+                                },
+                                style: ElevatedButton.styleFrom(
+                                  primary: Color(
+                                      0xFF31C48D), // Set your desired background color
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(17),
+                                  ),
+                                ),
+                                child: SizedBox(
+                                  width: 235,
+                                  height: 44.08,
+                                  child: Center(
+                                    child: Text(
+                                      'Buat Akun',
+                                      textAlign: TextAlign.center,
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 14,
+                                        fontFamily: 'Poppins',
+                                        fontWeight: FontWeight.w500,
+                                        height: 0,
                                       ),
                                     ),
-                                    Positioned(
-                                      left: 0,
-                                      top: 13.08,
-                                      child: SizedBox(
-                                        width: 250,
-                                        height: 17,
-                                        child: Text(
-                                          'Buat Akun',
-                                          textAlign: TextAlign.center,
-                                          style: TextStyle(
-                                            color: Colors.white,
-                                            fontSize: 14,
-                                            fontFamily: 'Poppins',
-                                            fontWeight: FontWeight.w500,
-                                            height: 0,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  ],
+                                  ),
                                 ),
                               ),
                             ),
@@ -486,146 +450,41 @@ class _KelolaAkun extends State<KelolaAkun> {
                             ),
                             const SizedBox(height: 16),
                             Container(
-                              height: 48,
-                              child: Column(
-                                mainAxisSize: MainAxisSize.min,
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Container(
-                                    height: 48,
-                                    padding: const EdgeInsets.symmetric(
-                                        horizontal: 24),
-                                    child: Column(
-                                      mainAxisSize: MainAxisSize.min,
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.start,
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Container(
-                                          width: double.infinity,
-                                          height: 48,
-                                          padding: const EdgeInsets.symmetric(
-                                              horizontal: 10, vertical: 8),
-                                          decoration: ShapeDecoration(
-                                            color: Color(0xFFF4F4F4),
-                                            shape: RoundedRectangleBorder(
-                                                borderRadius:
-                                                    BorderRadius.circular(8)),
-                                          ),
-                                          child: Row(
-                                            mainAxisSize: MainAxisSize.min,
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.start,
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.center,
-                                            children: [
-                                              SizedBox(
-                                                width: 245,
-                                                child: Text(
-                                                  '+6281357426470',
-                                                  style: TextStyle(
-                                                    color: Color(0xFF333333),
-                                                    fontSize: 12,
-                                                    fontFamily:
-                                                        'Plus Jakarta Sans',
-                                                    fontWeight: FontWeight.w400,
-                                                    height: 0,
-                                                  ),
-                                                ),
+                              child: Expanded(
+                                child: ListView.builder(
+                                  itemCount: daftarNoHp.length,
+                                  itemBuilder: (context, index) {
+                                    return Card(
+                                      elevation: 3,
+                                      margin: EdgeInsets.only(
+                                          left: 30,
+                                          top: 5,
+                                          right: 18,
+                                          bottom: 5),
+                                      child: ListTile(
+                                        title: Row(
+                                          children: [
+                                            Expanded(
+                                              child: Text(
+                                                daftarNoHp[index].hp,
+                                                style: TextStyle(
+                                                    fontSize: 14,
+                                                    fontFamily: "Poppins"),
                                               ),
-                                              const SizedBox(width: 10),
-                                              Container(
-                                                width: 25,
-                                                height: 25,
-                                                decoration: BoxDecoration(
-                                                  image: DecorationImage(
-                                                    image: NetworkImage(
-                                                        "https://via.placeholder.com/25x25"),
-                                                    fit: BoxFit.fill,
-                                                  ),
-                                                ),
-                                              ),
-                                            ],
-                                          ),
+                                            ),
+                                            IconButton(
+                                              icon: Image.asset(
+                                                  'assets/images/reset.png'),
+                                              onPressed: () {
+                                                print('reset password');
+                                              },
+                                            ),
+                                          ],
                                         ),
-                                      ],
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                            const SizedBox(height: 16),
-                            Container(
-                              height: 48,
-                              child: Column(
-                                mainAxisSize: MainAxisSize.min,
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Container(
-                                    height: 48,
-                                    padding: const EdgeInsets.symmetric(
-                                        horizontal: 24),
-                                    child: Column(
-                                      mainAxisSize: MainAxisSize.min,
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.start,
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Container(
-                                          width: double.infinity,
-                                          height: 48,
-                                          padding: const EdgeInsets.symmetric(
-                                              horizontal: 10, vertical: 8),
-                                          decoration: ShapeDecoration(
-                                            color: Color(0xFFF4F4F4),
-                                            shape: RoundedRectangleBorder(
-                                                borderRadius:
-                                                    BorderRadius.circular(8)),
-                                          ),
-                                          child: Row(
-                                            mainAxisSize: MainAxisSize.min,
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.start,
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.center,
-                                            children: [
-                                              SizedBox(
-                                                width: 245,
-                                                child: Text(
-                                                  '+6281226446610',
-                                                  style: TextStyle(
-                                                    color: Color(0xFF333333),
-                                                    fontSize: 12,
-                                                    fontFamily:
-                                                        'Plus Jakarta Sans',
-                                                    fontWeight: FontWeight.w400,
-                                                    height: 0,
-                                                  ),
-                                                ),
-                                              ),
-                                              const SizedBox(width: 10),
-                                              Container(
-                                                width: 25,
-                                                height: 25,
-                                                decoration: BoxDecoration(
-                                                  image: DecorationImage(
-                                                    image: NetworkImage(
-                                                        "https://via.placeholder.com/25x25"),
-                                                    fit: BoxFit.fill,
-                                                  ),
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                ],
+                                      ),
+                                    );
+                                  },
+                                ),
                               ),
                             ),
                           ],

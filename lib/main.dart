@@ -69,8 +69,8 @@ class MyApp extends StatelessWidget {
             900: Color(0xff31C48D),
             1000: Color(0xff31C48D),
           })),
-      home: KelolaJadwalPosyandu(),
-      initialRoute: '/kelolaJadwalPosyandu',
+      home: KelolaAkun(),
+      initialRoute: '/kelolaAkun',
       routes: {
         '/splash': (context) => SplashPage(),
         '/started': (context) => GetStarted(),
